@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Processed Results</h1>
+        <div class="table-container">
+            {{ table | safe }}
+        </div>
+        <form action="/download" method="post">
+            <input type="hidden" name="csv_file" value="{{ csv_file }}">
+            <button type="submit">Download Full Report</button>
+        </form>
+        <br>
+        <a href="/">Upload More Files</a>
+    </div>
+</body>
+</html>

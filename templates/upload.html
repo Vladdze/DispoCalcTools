@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload CSV Files</h1>
+        <form action="/process" method="post" enctype="multipart/form-data">
+            <label for="retreaver_report">Retreaver Report:</label>
+            <input type="file" id="retreaver_report" name="retreaver_report" accept=".csv" required>
+
+            <label for="sales_report">Sales Report:</label>
+            <input type="file" id="sales_report" name="sales_report" accept=".csv" required>
+
+            <button type="submit">Process Files</button>
+        </form>
+    </div>
+</body>
+</html>
