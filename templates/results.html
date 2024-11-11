@@ -12,7 +12,7 @@
         <div class="table-container">
             {{ table | safe }}
         </div>
-        <form action="/download" method="post">
+        <form action="/download" method="post" style="margin-top: 20px;">
             <input type="hidden" name="csv_file" value="{{ csv_file }}">
             <button type="submit">Download Full Report</button>
         </form>
